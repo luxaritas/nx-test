@@ -34,17 +34,17 @@
       }
     },
     "mydep": {
-      "root": "libs/mydep",
-      "sourceRoot": "libs/mydep/src",
+      "root": "libs/subfolder/mydep",
+      "sourceRoot": "libs/subfolder/mydep/src",
       "projectType": "library",
       "targets": {
         "build": {
           "executor": "@nrwl/workspace:run-commands",
           "options": {
             "commands": [
-              "mkdir -p dist/libs/mydep/",
-              "cp libs/mydep/src/mydep.d.ts dist/libs/mydep/mydep.d.ts",
-              "cp libs/mydep/src/mydep.js dist/libs/mydep/mydep.js"
+              "mkdir -p dist/libs/subfolder/mydep/",
+              "cp libs/subfolder/mydep/src/mydep.d.ts dist/libs/subfolder/mydep/mydep.d.ts",
+              "cp libs/subfolder/mydep/src/mydep.js dist/libs/subfolder/mydep/mydep.js"
             ],
             "parallel": false
           }
