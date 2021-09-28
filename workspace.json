@@ -35,7 +35,7 @@
     },
     "mydep": {
       "root": "libs/mydep",
-      "sourceRoot": "libs/mydep",
+      "sourceRoot": "libs/mydep/src",
       "projectType": "library",
       "targets": {
         "build": {
@@ -43,8 +43,10 @@
           "options": {
             "commands": [
               "mkdir -p dist/libs/mydep/",
-              "cp libs/mydep/* dist/libs/mydep/"
-            ]
+              "cp libs/mydep/src/mydep.d.ts dist/libs/mydep/mydep.d.ts",
+              "cp libs/mydep/src/mydep.js dist/libs/mydep/mydep.js"
+            ],
+            "parallel": false
           }
         }
       }
