@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@nx-test/mylib": ["libs/mylib/src/index"],
-      "@nx-test/mydep": ["dist/mydep/mydep"]
+      "@nx-test/mydep": ["dist/libs/mydep/mydep"]
     }
   },
   "exclude": ["node_modules", "tmp"]
