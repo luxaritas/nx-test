@@ -29,6 +29,9 @@
   "projects": {
     "mylib": {
       "tags": []
+    },
+    "mydep": {
+      "tags": []
     }
   }
 }

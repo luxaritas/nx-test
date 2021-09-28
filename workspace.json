@@ -32,6 +32,22 @@
           }
         }
       }
+    },
+    "mydep": {
+      "root": "libs/mydep",
+      "sourceRoot": "libs/mydep",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              "mkdir -p dist/libs/mydep/",
+              "cp libs/mydep/* dist/libs/mydep/"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
