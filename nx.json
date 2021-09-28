@@ -1,5 +1,5 @@
 {
-  "npmScope": "nx-implicit-paths-test",
+  "npmScope": "nx-test",
   "affected": {
     "defaultBase": "master"
   },

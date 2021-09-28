@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-implicit-paths-test/mylib": ["libs/mylib/src/index"],
-      "@nx-implicit-paths-test/mydep": ["dist/mydep/mydep"]
+      "@nx-test/mylib": ["libs/mylib/src/index"],
+      "@nx-test/mydep": ["dist/mydep/mydep"]
     }
   },
   "exclude": ["node_modules", "tmp"]
