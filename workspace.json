@@ -1,38 +1,6 @@
 {
   "version": 2,
   "projects": {
-    "mylib": {
-      "root": "libs/mylib",
-      "sourceRoot": "libs/mylib/src",
-      "projectType": "library",
-      "targets": {
-        "build": {
-          "executor": "@nrwl/workspace:tsc",
-          "outputs": ["{options.outputPath}"],
-          "options": {
-            "outputPath": "dist/libs/mylib",
-            "main": "libs/mylib/src/index.ts",
-            "tsConfig": "libs/mylib/tsconfig.lib.json",
-            "assets": ["libs/mylib/*.md"]
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["libs/mylib/**/*.ts"]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/mylib"],
-          "options": {
-            "jestConfig": "libs/mylib/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
     "mydep": {
       "root": "libs/subfolder/mydep",
       "sourceRoot": "libs/subfolder/mydep/src",
@@ -49,10 +17,51 @@
             "parallel": false
           }
         }
-      }
+      },
+      "tags": []
+    },
+    "mylib": {
+      "root": "libs/mylib",
+      "sourceRoot": "libs/mylib/src",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/js:tsc",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/libs/mylib",
+            "main": "libs/mylib/src/index.ts",
+            "tsConfig": "libs/mylib/tsconfig.lib.json",
+            "assets": [
+              "libs/mylib/*.md"
+            ]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": [
+            "{options.outputFile}"
+          ],
+          "options": {
+            "lintFilePatterns": [
+              "libs/mylib/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/mylib"
+          ],
+          "options": {
+            "jestConfig": "libs/mylib/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
     }
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/workspace"
   }
 }
